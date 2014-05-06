@@ -63,7 +63,7 @@ EndScreen.prototype = {
 	
 		
 	},
-	clickHandler : function(evt) {
+	clickHandler : function(event) {
 		var url ="";
 		var publishingURL = location.href;
 		var publishingContent = this.manipulateSSNContent();

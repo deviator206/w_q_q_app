@@ -1,8 +1,7 @@
 @font-face {
 	font-family: Rotis-SansSeriffor-ACCN-Bold;
-	src:url('./fonts/Rotis-SansSeriffor-ACCN-Bold.eot');
-	src:url('./fonts/Rotis-SansSeriffor-ACCN-Bold.eot?iefix') format('embedded-opentype');
-	src: url('./fonts/Rotis-SansSeriffor-ACCN-Bold.otf');
+	
+	
 }
 .body-bg {
 	margin: 7% auto;
