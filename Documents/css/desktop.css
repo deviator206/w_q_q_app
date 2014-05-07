@@ -2,6 +2,7 @@
 	font-family: Rotis-SansSeriffor-ACCN-Bold;
 	src:url('./fonts/RotisSansSerifforACCN-Bold.eot?')format('embedded-opentype');
 	src :url('./fonts/RotisSansSerifforACCN-Bold.otf')format('opentype');
+	src: url('./fonts/RotisSansSerifforACCN-Bold.woff')  format('woff');
 }
 
 .body-bg {
@@ -167,7 +168,7 @@
 }
 .answer-container {
 	min-height: 230px;
-	margin: 5% 5% 0 8%;
+	margin: 0 5% 0 8%;
 	background: #FFF500;
 }
 .answer-title {
