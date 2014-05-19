@@ -17,6 +17,8 @@ LoadingScreen.prototype = {
 
 		var resourceKey, sHTML = this.mApplication.renderTemplate('loading_screen_ui', {
 		});
+		
+		document.getElementById(this.mDivName).innerHTML = "";
 		document.getElementById(this.mDivName).innerHTML = sHTML;
 
 		this.mGameAssetLoader = new PxLoader();
@@ -29,16 +31,20 @@ LoadingScreen.prototype = {
 		this.mGameAssetLoader.addCompletionListener(this.onComplete.bind(this));
 
 		this.mGameAssetLoader.start();
-		
+
 		trace(" loading..");
 	},
 	onProgress : function(c) {
 		var a = (parseInt(c.completedCount / c.totalCount * 100) >> 0);
-		document.getElementById("loadingMessage").innerHTML = "<h1>Loading  Assets : Status :" + a + " % </h1>" ;
+		
+		//document.getElementById("loadingMessage").innerHTML = "<h1>Loading  Assets : Status :" + a + " % </h1>" ;
+		
+		document.getElementById("loader_anim").style.width =a+"%" 
+		
 		trace(a)
 	},
 	onComplete : function() {
-		console.log("ASSET Loading COMPLETE!")
+		trace("ASSET Loading COMPLETE!")
 		this.mApplication.nextScene();
 	},
 	onWrapperPush : function(cmd, data) {

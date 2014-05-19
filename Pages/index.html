@@ -10,7 +10,8 @@
 
 	</head>
 	<body>
-		<script type="text/javascript">
+	
+	<script type="text/javascript">
 			/* STARTING POINT*/
 			var _gMainApplication
 			var documentPath = "Documents/";
@@ -87,7 +88,7 @@
 					}
 
 				} else {
-					
+
 					_gMainApplication = new ApplicationWrapper();
 					_gMainApplication.setUp({
 						screenNames : arrDivNames
@@ -164,13 +165,19 @@
 		</script>
 
 		<!-- BEGIN TEMPLATES -->
-		<script type="html/template" id = "loading_screen_ui">
+		<script type="html/template" id="loading_screen_ui_1">
 			<div id="loadingMessage">
 				<h1>Loading Assets..</h1>
 			</div>
 		</script>
+		
+		<script type="html/template" id="loading_screen_ui">
+			<div id="loadingMessage" class="loader_wanted">
+				<div id="loader_anim"></div>
+			</div>
+		</script>
 
-		<script type="html/template" id = "landing_screen_ui">
+		<script type="html/template" id="landing_screen_ui">
 			<div class='home-question-text'>Why do smart women want to work at Accenture?</div>
 			<div class='home-btn-container'>
 			<div class='std-btn first-left-btn' id='landing_btn_start'>Start Game</div>
@@ -180,24 +187,24 @@
 
 		</script>
 
-		<script type="html/template" id = "intro_screen_ui">
+		<script type="html/template" id="intro_screen_ui">
 
 			<div class='landing-title'>Introduction</div>
 			<div class='button-text-container'>
 			<div class='landing-intro-text'>
-			<div class='landing-para'>At Accenture, we know that the success of our women around the globe is the key to our success as a company. That's why we are committed to supporting their unique professional goals and aspirations and why we foster an innovative, collaborative, high-energy work environment.</div>
-			<div class='landing-para'>Do you know what we do for our women and for those in society? Take our quiz to learn how Accenture delivers on the benefits and rewards that women deserve. The faster you correctly answer these [xx] multiple choice questions, the higher your chance of earning a 'gold star' and bragging rights!</div>
+			<div class='landing-para'>At Accenture, we know that the success of our women around the globe is the key to our success as a company. That’s why we are committed to supporting their unique professional goals and aspirations and why we foster an innovative, collaborative, high-energy work environment.</div>
+			<div class='landing-para'>Do you know what we do for our women and for those in society? Take our quiz to learn how Accenture delivers on the benefits and rewards that women deserve. You will get 3 minutes to answer all questions; the faster you correctly answer these 10 multiple choice questions, the higher your chance of earning a ‘gold star’ and bragging rights! </div>
 			</div>
 			<div  id="intro_btn_continue" class='std-btn first-left-btn landing-continue-btn' >Continue</div>
 			</div>
 			<div class='ladding-ladder-img landing-ladder-container'></div>
 		</script>
 
-		<script type="html/template" id = "top_question_game_screen_ui">
+		<script type="html/template" id="top_question_game_screen_ui">
 			<div id="q_<%questionnumber%>" class="quiz-number <%is_first_element%>"><%value%></div>
 		</script>
 
-		<script type="html/template" id = "game_screen_ui">
+		<script type="html/template" id="game_screen_ui">
 			<div class='time-number-container'>
 			<div class='time-container-layout'>
 			<div id="timerComponent" class='time-container'>01:47</div>
@@ -242,16 +249,19 @@
 			</div>
 		</script>
 
-		<script type="html/template" id = "end_screen_ui">
+		<script type="html/template" id="end_screen_ui">
 			<div class='congrats-greater-than-img-container'>
 			<div class='congrats-greater-than-img'></div>
 			</div>
 			<div class='congrats-container'>
 			<div class='congrats-text'>Congratulations!</div>
 			<div class='landing-intro-text'>
-			<div class='landing-para end-screen-para'>You&#39;ve won the <%n_star%> star in <%n_second%> seconds. <a href="<%url_app%>"  target="_self"><span class="wqq-anchor-text">Play again</span></a> to get a better score and share it with friends to see if they can beat your score!
+			<div class='landing-para end-screen-para'>You&#39;ve won the <%n_star%> star in <%n_second%> seconds. <a href="<%url_app%>"  target="_self"><span class="wqq-anchor-text">Play again</span></a> to get a better score.
 			</div>
-			<div class='landing-para end-screen-para'>Read more about the<a href="<%url_diversity%>"  target="_blank"> <span class="wqq-anchor-text"> Inclusion and Diversity journey at Accenture.</span></a></div>
+			<div class='landing-para end-screen-para'>Share the quiz with friends to see if they can beat your score!
+			</div>
+			
+			<div class='landing-para end-screen-para'>Read more about the<a href="<%url_diversity%>"  target="_blank"> <span class="wqq-anchor-text"> Inclusion and Diversity journey at  Accenture.</span></a></div>
 			<div class='landing-para end-screen-para'>If all of this interests you, <a href="<%url_jobs%>" target="_blank"><span class="wqq-anchor-text"> click here </span></a>  to view  our open  jobs  and apply.</div>
 			</div>
 			<div>
@@ -263,7 +273,12 @@
 			<div class='award-img award-img-container'></div>
 		</script>
 
-		<div style="display: block;margin-left:20%;margin-top: 30%; " id="loadingScreen" style=""></div>
+		<div style="display: block;margin-left:30%;margin-top: 30%; " id="loadingScreen" style="">
+			<div id="loadingMessage_1">
+				<h1> Initializing....</h1>
+			</div>
+			
+		</div>
 		<div id="landingPage" style="display: none;" class='home-page-bg'></div>
 		<div id="introductionPage" style="display: none;" class='page-bg'></div>
 		<div id="gamePage"  style="display: none;" class='page-bg'></div>

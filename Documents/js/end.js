@@ -46,8 +46,6 @@ EndScreen.prototype = {
 		$("#facebook").css("background-image","url('"+resource_data.getPath("facebook")+"' )");
 		$("#twitter").css("background-image","url('"+resource_data.getPath("twitter")+"' )");
 		$("#linkedin").css("background-image","url('"+resource_data.getPath("linked_in")+"' )");
-		
-		$("#"+this.mDivName).addClass('congrats-page-bg')
 	},
 	manipulateSSNContent :function()
 	{

@@ -2,12 +2,9 @@
 	font-family: Rotis-SansSeriffor-ACCN-Bold;
 	src:url('./fonts/RotisSansSerifforACCN-Bold.eot?')format('embedded-opentype');
 	src :url('./fonts/RotisSansSerifforACCN-Bold.otf')format('opentype');
-	src: url('../../Pages/fonts/RotisSansSerifforACCN-Bold.woff')format('woff');
+	src: url('./fonts/RotisSansSerifforACCN-Bold.woff')format('woff');
 }
-.body
-{
-	font-size:12px;
-}
+
 .body-bg {
 	margin: 7% auto;
 }
@@ -30,6 +27,22 @@
 	font-size: 1em;
 	text-decoration: inherit;
 	text-decoration:underline;
+}
+
+.loader_wanted
+{
+	width: 60%;
+	height:50px;
+	border: 2px black solid;
+	border-radius: 10px;
+}
+
+#loader_anim
+{
+	width: 0%;
+	background-color: grey;
+	height: 50px;
+	border-radius: 8px;
 }
 
 .greater-than-image-container {

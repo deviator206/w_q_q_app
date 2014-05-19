@@ -45,10 +45,8 @@ function ApplicationWrapper() {
 	this.mHTMLTemplate = null;
 
 	 if(resource_data !== undefined)
-         resource_data.usemobileimages(isDesktopFlag);	
-	//this.jsAnimManager = new jsAnimManager(10);
+	resource_data.usemobileimages(isDesktopFlag);
 	this.setValues();
-	//this.nextScene();
 	return this
 }
 
@@ -96,6 +94,25 @@ ApplicationWrapper.prototype = {
 		}
 
 	},
+	restartAppTimer:function() {
+		clearInterval(this.mAppTimerComponent);
+		
+		this.mCurrentScreen.onWrapperPush('timer', {
+			val : this.mAppDisplayTimer
+		});
+		
+		this.mAppTimerComponent = setTimeout(this.onProgressTimer.bind(this), (1000));
+
+	},
+		pauseAppTimer:function() {
+		clearInterval(this.mAppTimerComponent);
+		
+		this.mCurrentScreen.onWrapperPush('timer', {
+			val : this.mAppDisplayTimer
+		});
+		
+	},
+	
 	startAppTimer : function() {
 		clearInterval(this.mAppTimerComponent);
 		this.mAppDisplayTimer = this.appMetaData.apptimer;

@@ -5,7 +5,7 @@
 var question_data = {
 
 	questionSet1 : [{
-		question : "How many women work at Accenture?",
+		question : "How many women work at Accenture globally?",
 		option_1 : " >30,000",
 		option_2 : " >40,000",
 		option_3 : " >60,000",
@@ -20,16 +20,16 @@ var question_data = {
 		option_3 : "Business Today",
 		option_4 : "Parents",
 		correct_answer : "2",
-		explanation : 'Working Mother\’s Best Companies list recognizes companies that offer family-friendly benefits as part of a flexible workplace. They assess companies on aspects such as workforce representation, child care, flexibility programs and leave policies.'
+		explanation : '<b> <i>Working Mother\’s </i></b> Best Companies list recognizes companies that offer family-friendly benefits as part of a flexible workplace. They assess companies on aspects such as workforce representation, child care, flexibility programs and leave policies.'
 
 	}, {
 		question : "What is the name of Accenture’s training program specifically designed to help women grow in their careers?",
-		option_1 : "Vaahini",
-		option_2 : "Woman to Woman",
+		option_1 : "Women Forward",
+		option_2 : "Path to Success",
 		option_3 : "Developing High Performing Women",
-		option_4 : "Women First",
+		option_4 : "Women Rule",
 		correct_answer : "3",
-		explanation : 'Developing High Performing Women is part of Accenture’s  annual investment in training women.'
+		explanation : 'Developing High Performing Women is part of Accenture’s  annual investment in training women. Accenture invests annually in providing training to its women employees.'
 
 	}, {
 		question : "What is Accenture in India’s women’s networking platform called?",
@@ -46,7 +46,7 @@ var question_data = {
 		option_3 : "Security guard for night travel",
 		option_4 : "All of these",
 		correct_answer : "4",
-		explanation : 'To learn more about the ways Accenture creates a welcoming workspace for women, go to <a href="http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx" target="_blank">http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx </a>'
+		explanation : '<a href="http://careers.accenture.com/in-en/team-culture/diversity/women/Pages/index.aspx" target="_blank">Click here </a> to learn more about the ways Accenture creates a welcoming workspace for women. '
 	}, {
 		question : "What was Accenture’s theme for International Women’s Day 2014?",
 		option_1 : "Knowing and Growing Your Career Capital",
@@ -70,7 +70,7 @@ var question_data = {
 		option_3 : "70%",
 		option_4 : "88%",
 		correct_answer : "3",
-		explanation : 'Not only did 70% believe there would be an increase in women CEOs, 15% of that group believes that the increase will be significant. In addition, 71% of all respondents thought the number of women on boards will increase by 2020. However, only 44% said their companies are preparing more women for senior management roles than in the past. Accenture has many programs in place that do just that.'
+		explanation : '70% believe there would be an increase in women CEOs, 15% of that group believes that the increase will be significant. 71% of all respondents thought the number of women on boards will increase by 2020. 44% said their companies are preparing women for senior management roles. Accenture has many programs in place that do just that.'
 	}, {
 		question : "What rank did Accenture achieve on LinkedIn India’s “Most in Demand Employers in 2013”?",
 		option_1 : "First",
@@ -81,10 +81,10 @@ var question_data = {
 		explanation : 'This is the second year in a row that Accenture has been ranked as the most sought after employer in India by the professional networking site LinkedIn.'
 	}, {
 		question : "How much did Accenture invest in training its employees in 2013?",
-		option_1 : " USD20,000,000",
-		option_2 : " USD200,000,000",
-		option_3 : " USD85,000,000",
-		option_4 : " USD850,000,000",
+		option_1 : " $20 million",
+		option_2 : " $200 million",
+		option_3 : " $85 million",
+		option_4 : " $850 million",
 		correct_answer : "4",
 		explanation : 'Accenture makes constant investments in our employees so they can develop skills and capabilities based on their interests and talents.'
 	}
@@ -195,7 +195,7 @@ var resource_data = {
 		'end' : 'endPage'
 	},
 	htmlentity : ['loading_screen_ui', 'landing_screen_ui', 'intro_screen_ui', 'game_screen_ui', 'end_screen_ui', 'top_question_game_screen_ui'],
-	appMode : 1, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
+	appMode : 2, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
 	appTimer : 180, // its seconds
 	bench_mark : [4, 8, 10], // scoring mechanism range
 	no_of_stars : ["Bronze", "Silver", "Gold"], // scoring mechanism award

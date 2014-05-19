@@ -157,9 +157,10 @@ GameScreen.prototype = {
 					$("#explanationContent .answer-text").html(expText +''+this.mCurrentQuesitonData['explanation']);
 
 					document.getElementById('explanationContent').style.display = "block"
+					
+					this.mApplication.pauseAppTimer();
 
 				}
-				$("#"+this.mDivName).addClass('page-bg')	
 
 				break;
 			case 'game_continue_btn':
@@ -169,8 +170,7 @@ GameScreen.prototype = {
 				//document.getElementById('game_continue_btn').innerHTML = "Submit"
 				this.mApplication.manipulateQuestionCounter(1)
 				this.displayQuestion(true);
-				$("#"+this.mDivName).addClass('page-bg')
-
+				this.mApplication.restartAppTimer();
 				break;
 			case 'game_back_btn':
 				this.mApplication.manipulateQuestionCounter(-1)

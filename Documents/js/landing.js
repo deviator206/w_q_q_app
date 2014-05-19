@@ -17,6 +17,7 @@ LandingScreen.prototype = {
 		var resourceKey, sHTML = this.mApplication.renderTemplate('landing_screen_ui', {
 			img_landing_footer : resource_data.getPath("landing_footer")
 		});
+		
 		document.getElementById(this.mDivName).innerHTML = sHTML;
 
 		// UI edits
@@ -26,7 +27,6 @@ LandingScreen.prototype = {
 		this.mApplication.addEventHandler('landing_btn_start', 'click', this.clickHandler.bind(this));
 		this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
 
-		$("#"+this.mDivName).addClass('home-page-bg')			
 		//this.onScreenUpdate()	
 	},
 
@@ -35,7 +35,9 @@ LandingScreen.prototype = {
 		trace("Landing Page: CLICKED :" + target.id);
 		switch(target.id) {
 			case 'landing_btn_start':
-				this.mApplication.moveTo('start');
+				//this.mApplication.moveTo('start');
+				//##CR##We will start the game with the introduction followed by the start button. Please look at the attached document for the same.
+				this.mApplication.moveTo('intro');
 				break;
 			case'landing_btn_intro':
 				this.mApplication.moveTo('intro');
