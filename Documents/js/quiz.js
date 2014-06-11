@@ -275,8 +275,17 @@ ApplicationWrapper.prototype = {
 				this.mCurrentScreen = new LandingScreen(this);
 				break;
 			case 40:
-				this.nGameState = 60;
-				this.mCurrentScreen = new IntroScreen(this);
+				// Commented because of we dont need to show Introduction page instead of it directly show games - by Antesh
+				//this.nGameState = 60;
+				//this.mCurrentScreen = new IntroScreen(this);
+				
+				//copied and pasted same code from below case 60 to show game screen
+				this.nGameState = 80;
+				if (this.answeredQuestion.length == 0)
+					this.appSessionData.questioncounter = 0
+
+				this.mCurrentScreen = new GameScreen(this);
+				this.startAppTimer();
 				break;
 			case 60:
 				this.nGameState = 80;

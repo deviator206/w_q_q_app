@@ -82,11 +82,11 @@
 }
 .home-question-text {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
-	font-size: 2em;
+	font-size: 2.7em;
 	color: #FFF;
-	width: 35%;
-	margin: 0 0 0 8%;
-	padding-top:20%;
+	width: 45%;
+	margin: 0 0 0 5%;
+	padding-top:5%;
 }
 .std-btn {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
@@ -115,6 +115,7 @@
 	float: left;
 }
 .landing-continue-btn{width:20%;}
+.landing-start-btn{width:30%;}
 .time-container {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
 	width: 45%;
@@ -225,7 +226,7 @@
 	color: #FFF;
 	width: 85%;
 	margin: 3% 0 0 8%;
-	font-size:1.5em;
+	font-size:1.8em;
 }
 .question-text {
 	font-family:Rotis-SansSeriffor-ACCN-Bold;
