@@ -170,8 +170,7 @@ font-size:12px;
 	width: 60px;
 	height:60px;
 	color: #FFF500;
-	background-size: 80% 80%;
-	background-position: 50% 50%;
+	margin-left: 3%;
 }
 
 .quiz-number {
