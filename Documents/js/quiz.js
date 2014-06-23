@@ -235,7 +235,7 @@ ApplicationWrapper.prototype = {
 	scoringMechanism : function(m) {
 		var bReturn = false, mIndex, usrAns = this.answeredAnswers[m];
 
-		var actual = question_data['questionSet' + this.appMetaData.questionSet][this.appSessionData.questioncounter].correct_answer
+		var actual = this.question_data['questionSet' + this.appMetaData.questionSet][this.appSessionData.questioncounter].correct_answer
 		if (usrAns === actual) {
 			this.mScoreTracker[m] = resource_data.per_question;
 			bReturn = true
