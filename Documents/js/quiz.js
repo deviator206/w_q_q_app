@@ -33,6 +33,7 @@ function ApplicationWrapper() {
 		questioncounter : 0,
 		questionSet : 1
 	}
+	this.question_data={};
 
 	this.answeredQuestion = [];
 	this.answeredAnswers = [];
@@ -63,7 +64,12 @@ ApplicationWrapper.prototype = {
 		this.mTrackerAnswers = [];
 		this.mScoreTracker = [];
 
-		this.appMetaData.totalquestion = question_data['questionSet' + this.appMetaData.questionSet].length - 1;
+		
+		
+		
+		this.createRandomQuestionSet();
+		
+		this.appMetaData.totalquestion = this.question_data['questionSet' + this.appMetaData.questionSet].length - 1;
 
 		this.appMetaData.apptimer = resource_data.appTimer;
 
@@ -77,6 +83,40 @@ ApplicationWrapper.prototype = {
 		this.mAppTimerComponent = 0;
 		this.mAppDisplayTimer = 0;
 
+	},
+	createRandomQuestionSet :function()
+	{
+		this.question_data={};
+		
+		var len = question_data['questionSet' + this.appMetaData.questionSet].length;
+		var totalRandomQuestionList= [];
+		var realQuestionLength = resource_data.total_questions;
+		var nIndex =0;
+		var arrT=[]
+		for(var i=0;i<realQuestionLength;i++)
+		{
+			arrT.push(i);
+		}
+		//
+		this.question_data['questionSet' + this.appMetaData.questionSet] =[]
+		for(var i=0;i<realQuestionLength;i++)
+		{
+			// 
+			nIndex = this.getRandomInt(0,arrT.length);
+			totalRandomQuestionList[i] = arrT[nIndex];
+			
+			this.question_data['questionSet' + this.appMetaData.questionSet][i]=question_data['questionSet' + this.appMetaData.questionSet][nIndex];
+			arrT.splice(nIndex,1);
+		} 
+		
+		trace("totalRandomQuestionList :"+totalRandomQuestionList)
+		trace(this.question_data['questionSet' + this.appMetaData.questionSet]);
+		
+		
+		
+	},
+	getRandomInt:function(min, max) {
+	    return Math.floor(Math.random() * (max - min + 1)) + min;
 	},
 	onProgressTimer : function() {
 		this.mAppDisplayTimer--;
@@ -130,12 +170,14 @@ ApplicationWrapper.prototype = {
 	},
 	setValues : function() {
 		
-	
 		this.appMode = resource_data.appMode;
 		this.mHTMLTemplate = new HTMLTemplate();
 		this.mHTMLTemplate.loadTemplate(resource_data.htmlentity, 'script');
 
-		this.appMetaData.totalquestion = question_data['questionSet' + this.appMetaData.questionSet].length - 1;
+		this.createRandomQuestionSet();
+		
+		
+		this.appMetaData.totalquestion = this.question_data['questionSet' + this.appMetaData.questionSet].length - 1;
 		this.appMetaData.benchmark = resource_data.bench_mark;
 
 		for (var indx = 0; indx <= this.appMetaData.totalquestion; indx++)

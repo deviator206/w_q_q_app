@@ -25,7 +25,7 @@ LandingScreen.prototype = {
 		//$("#" + this.mDivName + " .deviat_grtrThan").css("background-image", "url('" + resource_data.getPath("grtr_logo_panel") + "')");
 
 		this.mApplication.addEventHandler('landing_btn_start', 'click', this.clickHandler.bind(this));
-		this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
+		//this.mApplication.addEventHandler('landing_btn_intro', 'click', this.clickHandler.bind(this));
 
 		//this.onScreenUpdate()	
 	},
@@ -63,7 +63,7 @@ LandingScreen.prototype = {
 			h = document.body.clientHeight;
 		}
 		
-		console.log(w,h)
+		
 		switch(w)
 		{
 			case 3201:

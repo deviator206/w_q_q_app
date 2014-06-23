@@ -72,7 +72,7 @@ GameScreen.prototype = {
 
 			case 0:
 				var questionTotal = this.mApplication.appMetaData['totalquestion'], mTemp, index = 1, m = this.mApplication.appSessionData['questioncounter'], set = this.mApplication.appSessionData['questionSet'];
-				this.mCurrentQuesitonData = question_data["questionSet"+set][m];
+				this.mCurrentQuesitonData = this.mApplication.question_data["questionSet"+set][m];
 
 				document.getElementById('questionContent').innerHTML = this.mCurrentQuesitonData.question;
 				//FOR OPTIONS
@@ -153,7 +153,7 @@ GameScreen.prototype = {
 					$("#game_submit_btn").css("display", "none");
 
 					$("#explanationContent .answer-title").html(((answer == true) ? 'Correct' : 'Incorrect'));
-					var expText = (answer != true) ? 'The correct answer is '+rightoption+'<br>' : ''
+					var expText = (answer != true) ? 'The correct answer is '+rightoption+'. ' : ''
 					$("#explanationContent .answer-text").html(expText +''+this.mCurrentQuesitonData['explanation']);
 
 					document.getElementById('explanationContent').style.display = "block"

@@ -47,9 +47,42 @@ EndScreen.prototype = {
 		$("#twitter").css("background-image","url('"+resource_data.getPath("twitter")+"' )");
 		$("#linkedin").css("background-image","url('"+resource_data.getPath("linked_in")+"' )");
 	},
-	manipulateSSNContent :function()
+	// manipulateSSNContent :function()
+	// {
+		// var str = resource_data.social_site_content;
+		// //replace badge won
+		// str = str.replace("<%badge_won%>",this.storeScore[2]);
+		// //replace time taken
+		// str = str.replace("<%time_taken%>",this.storeScore[1]);
+		// //add link
+		// str = str.replace("<%url_for_game%>",location.href);
+// 		
+		// str = encodeURIComponent(str);
+// 		
+		// return str
+// 	
+// 		
+	// },
+	
+	manipulateSSNContent :function(sns_site_name)
 	{
 		var str = resource_data.social_site_content;
+		switch(sns_site_name)
+		{
+			case 'facebook':
+				str = resource_data.social_site_content_facebook;
+				break;
+			case 'twitter':
+			str = resource_data.social_site_content_twitter;
+				break;
+			case 'linkedin':
+			str = resource_data.social_site_content_linkedin;
+				break;
+			default :
+			
+				break;
+		}
+		
 		//replace badge won
 		str = str.replace("<%badge_won%>",this.storeScore[2]);
 		//replace time taken
@@ -66,11 +99,13 @@ EndScreen.prototype = {
 	clickHandler : function(event) {
 		var url ="";
 		var publishingURL = location.href;
-		var publishingContent = this.manipulateSSNContent();
+		//var publishingContent = this.manipulateSSNContent();
 		
 		var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
 		switch(target.id) {
 			case 'facebook':
+			
+			var publishingContent = this.manipulateSSNContent('facebook');
 			/*
 			 https://www.facebook.com/sharer/sharer.php
 			?s=100
@@ -84,20 +119,23 @@ EndScreen.prototype = {
 				//url = "http://www.facebook.com/sharer.php?u="+publishingURL+"&amp;t="+publishingContent;
 				//url = "https://www.facebook.com/sharer/sharer.php?s=100&p[title]=Example%20Title&p[summary]=Example%20Title&p[url]=http://google.com/&p[images][0]=http://www.w3schools.com/images/w3logotest2.png"
 				//url = "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption="+publishingContent+"&link="&redirect_uri=https://developers.facebook.com/tools/explorer" 
-				
+				//picture
 				//working
 				//url = "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=WQQ&description=" +publishingContent+ "&link=http://primary.careers-edit.accenture.com/&redirect_uri=http://facebook.com"
 				//working as expected... with self app
-				url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" +publishingContent+ "&link="+publishingURL+"&redirect_uri=http://facebook.com"
+				//working IMAGE SAMPLE :http://ginva.com/wp-content/uploads/2012/11/free-image-public-domain-31.jpg
+				url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" +publishingContent+ "&link="+publishingURL+"&redirect_uri=http://facebook.com&picture=https://primary.careers-edit.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/award.png"
 				window.open(url,"_blank");
 				break;
 			case 'twitter':
+				var publishingContent = this.manipulateSSNContent('twitter');
 				url = "http://twitter.com/home?status="+publishingContent;
 				window.open(url,"_blank");
 				break;
 			case 'linkedin':
+				var publishingContent = this.manipulateSSNContent('linkedin');
 				//https://developer.linkedin.com/documents/share-linkedin
-				url = 'http://www.linkedin.com/shareArticle?mini=true&url='+publishingURL+'&title='+publishingContent+ '&summary= ' +publishingContent+ '&source='+publishingURL;
+				url = 'http://www.linkedin.com/shareArticle?mini=true&url='+publishingURL+'&title=WQQ&summary= ' +publishingContent+ '&source='+publishingURL;
 				window.open(url,"_blank");
 
 				break;

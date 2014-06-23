@@ -4,7 +4,10 @@
 	src :url('./fonts/RotisSansSerifforACCN-Bold.otf')format('opentype');
 	src: url('./fonts/RotisSansSerifforACCN-Bold.woff')format('woff');
 }
-
+body
+{
+font-size:12px;
+}
 .body-bg {
 	margin: 7% auto;
 }
@@ -32,17 +35,17 @@
 .loader_wanted
 {
 	width: 60%;
-	height:50px;
-	border: 2px black solid;
-	border-radius: 10px;
+	height:100px;
+	xborder: 2px black solid;
+	xborder-radius: 10px;
 }
 
 #loader_anim
 {
 	width: 0%;
-	background-color: grey;
-	height: 50px;
-	border-radius: 8px;
+	xbackground-color: grey;
+	height: 80px;
+	xborder-radius: 8px;
 }
 
 .greater-than-image-container {
@@ -75,7 +78,7 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	width: 175px;
-	height: 242px;
+	height: 197px;
 }
 .congrats-greater-than-img-container {
 	padding-top: 8%;
@@ -113,6 +116,10 @@
 .button-text-container {
 	width: 60%;
 	float: left;
+	
+}
+#landingPage .landing-intro-text{
+	max-height:405px;
 }
 .landing-continue-btn{width:20%;}
 .landing-start-btn{width:30%;}
@@ -149,6 +156,22 @@
 }
 .first-quiz-number {
 	margin-left: 7% !important;
+}
+
+.loader-inner-container
+{
+	background-color:yellow;
+	width:0%;
+	height:100%;
+}
+.quiz-number-loader {
+	border: 5px solid #FFF500;
+	display: inline-block;
+	width: 12%;
+	height:60px;
+	color: #FFF500;
+	background-size: 80% 80%;
+	background-position: 50% 50%;
 }
 
 .quiz-number {

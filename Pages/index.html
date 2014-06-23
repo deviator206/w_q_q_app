@@ -173,16 +173,38 @@
 		
 		<script type="html/template" id="loading_screen_ui">
 			<div id="loadingMessage" class="loader_wanted">
-				<div id="loader_anim"></div>
+				<div id="loader_anim">
+					<div id="loader-1" class="quiz-number-loader">
+						<div class="loader-inner-container"></div>
+					</div>
+					<div id="loader-2" class="quiz-number-loader">
+						<div class="loader-inner-container"></div>
+					</div>
+					<div id="loader-3" class="quiz-number-loader">
+						<div class="loader-inner-container"></div>
+					</div>
+					<div id="loader-4" class="quiz-number-loader">
+						<div class="loader-inner-container"></div>
+					</div>
+					<div id="loader-5" class="quiz-number-loader">
+						<div class="loader-inner-container"></div>
+					</div>
+					
+					
+				</div>
 			</div>
 		</script>
 
 		<script type="html/template" id="landing_screen_ui">
 			<div class='home-question-text'>Why do smart women want to work at Accenture?</div>
-			<div class='home-btn-container'>
-			<div class='std-btn first-left-btn' id='landing_btn_start'>Start Game</div>
-			<div class='std-btn intro-btn' id='landing_btn_intro'>Introduction</div>
+			<div class='button-text-container'>
+			<div class='landing-intro-text'>
+			<div class='landing-para'>At Accenture, we know that the success of our women around the globe is the key to our success as a company. That’s why we are committed to supporting their unique professional goals and aspirations and why we foster an innovative, collaborative, high-energy work environment.</div>
+			<div class='landing-para'>Do you know what we do for our women and for those in society? Take our quiz to learn how Accenture delivers on the benefits and rewards that women deserve. You will get 3 minutes to answer all questions; the faster you correctly answer these 10 multiple choice questions, the higher your chance of earning a ‘gold star’ and bragging rights! </div>
 			</div>
+			<div  id="landing_btn_start" class='std-btn first-left-btn landing-start-btn' >Start Game</div>
+			</div>
+
 			<div id="img_landing_lady1" class='home-girl-img'></div>
 
 		</script>
@@ -192,8 +214,8 @@
 			<div class='landing-title'>Introduction</div>
 			<div class='button-text-container'>
 			<div class='landing-intro-text'>
-			<div class='landing-para'>At Accenture, we know that the success of our women around the globe is the key to our success as a company. Thatâ€™s why we are committed to supporting their unique professional goals and aspirations and why we foster an innovative, collaborative, high-energy work environment.</div>
-			<div class='landing-para'>Do you know what we do for our women and for those in society? Take our quiz to learn how Accenture delivers on the benefits and rewards that women deserve. You will get 3 minutes to answer all questions; the faster you correctly answer these 10 multiple choice questions, the higher your chance of earning a â€˜gold starâ€™ and bragging rights! </div>
+			<div class='landing-para'>At Accenture, we know that the success of our women around the globe is the key to our success as a company. That’s why we are committed to supporting their unique professional goals and aspirations and why we foster an innovative, collaborative, high-energy work environment.</div>
+			<div class='landing-para'>Do you know what we do for our women and for those in society? Take our quiz to learn how Accenture delivers on the benefits and rewards that women deserve. You will get 3 minutes to answer all questions; the faster you correctly answer these 10 multiple choice questions, the higher your chance of earning a ‘gold star’ and bragging rights! </div>
 			</div>
 			<div  id="intro_btn_continue" class='std-btn first-left-btn landing-continue-btn' >Continue</div>
 			</div>
@@ -258,11 +280,12 @@
 			<div class='landing-intro-text'>
 			<div class='landing-para end-screen-para'>You&#39;ve won the <%n_star%> star in <%n_second%> seconds. <a href="<%url_app%>"  target="_self"><span class="wqq-anchor-text">Play again</span></a> to get a better score.
 			</div>
-			<div class='landing-para end-screen-para'>Share the quiz with friends to see if they can beat your score!
-			</div>
+
 			
 			<div class='landing-para end-screen-para'>Read more about the<a href="<%url_diversity%>"  target="_blank"> <span class="wqq-anchor-text"> Inclusion and Diversity journey at  Accenture.</span></a></div>
 			<div class='landing-para end-screen-para'>If all of this interests you, <a href="<%url_jobs%>" target="_blank"><span class="wqq-anchor-text"> click here </span></a>  to view  our open  jobs  and apply.</div>
+			</div>
+			<div class='landing-para end-screen-para'>Share the quiz with friends to see if they can beat your score!
 			</div>
 			<div>
 			<div id="linkedin" class='social-icon-container linked-in-icon'></div>
@@ -273,16 +296,28 @@
 			<div class='award-img award-img-container'></div>
 		</script>
 
-		<div style="display: block;margin-left:30%;margin-top: 30%; " id="loadingScreen" style="">
-			<div id="loadingMessage_1">
-				<h1> Initializing....</h1>
+		<div style="display: block; margin-left: 30%; margin-top: 8%;" id="loadingScreen">
+			<div id="loadingMessage" class="loader_wanted">
+				<div id="loader_anim" style="width: 100%;"></div>
 			</div>
-			
 		</div>
-		<div id="landingPage" style="display: none;" class='home-page-bg'></div>
-		<div id="introductionPage" style="display: none;" class='page-bg'></div>
-		<div id="gamePage"  style="display: none;" class='page-bg'></div>
-		<div id="endPage"  style="display: none;" class='congrats-page-bg'></div>
+		<div id="landingPage" style="display: none; background-image: url(https://primary.careers-edit.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/landing/bg-girl.png);" class="home-page-bg">
+			<div class="home-question-text">Why do smart women want to work at Accenture?</div>
+			<div class="button-text-container">
+			<div class="landing-intro-text">
+			<div class="landing-para">At Accenture, we know that the success of our women around the globe is the key to our success as a company. That’s why we are committed to supporting their unique professional goals and aspirations and why we foster an innovative, collaborative, high-energy work environment.</div>
+			<div class="landing-para">Do you know what we do for our women and for those in society? Take our quiz to learn how Accenture delivers on the benefits and rewards that women deserve. You will get 3 minutes to answer all questions; the faster you correctly answer these 10 multiple choice questions, the higher your chance of earning a ‘gold star’ and bragging rights! </div>
+			</div>
+			<div id="landing_btn_start" class="std-btn first-left-btn landing-start-btn">Start Game</div>
+			</div>
 
-	</body>
-</html>
+			<div id="img_landing_lady1" class="home-girl-img"></div>
+
+		</div>
+		<div id="introductionPage" style="display: none;" class="page-bg"></div>
+		<div id="gamePage" style="display: none;" class="page-bg"></div>
+		<div id="endPage" style="display: none;" class="congrats-page-bg"></div>
+		
+	</body>	
+	</html>
+		

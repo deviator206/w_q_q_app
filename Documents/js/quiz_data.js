@@ -11,7 +11,7 @@ var question_data = {
 		option_3 : " >60,000",
 		option_4 : " >100,000",
 		correct_answer : "4",
-		explanation : '“Our commitment to inclusion and diversity at Accenture, including attracting, retaining and advancing women, is critical to being a high-performance business,” said Pierre Nanterme, Accenture Chairman and CEO'
+		explanation : '“Our commitment to inclusion and diversity at Accenture, including attracting, retaining and advancing women, is critical to being a high-performance business,” said Pierre Nanterme, Accenture Chairman and CEO.'
 
 	}, {
 		question : "Which magazine included Accenture in its list of ‘100 Best Companies for Working Mothers’ for 11 years in a row?",
@@ -20,7 +20,7 @@ var question_data = {
 		option_3 : "Business Today",
 		option_4 : "Parents",
 		correct_answer : "2",
-		explanation : '<b> <i>Working Mother\’s </i></b> Best Companies list recognizes companies that offer family-friendly benefits as part of a flexible workplace. They assess companies on aspects such as workforce representation, child care, flexibility programs and leave policies.'
+		explanation : 'Working Mother\’s Best Companies list recognizes companies that offer family-friendly benefits as part of a flexible workplace. They assess companies on aspects such as workforce representation, child care, flexibility programs and leave policies.'
 
 	}, {
 		question : "What is the name of Accenture’s training program specifically designed to help women grow in their careers?",
@@ -54,7 +54,7 @@ var question_data = {
 		option_3 : "Learning to Say Yes to Success",
 		option_4 : "Lean In",
 		correct_answer : "1",
-		explanation : 'Accenture chose Knowing and Growing Your Career Capital as its theme for International Women’s Day 2014 as part of our continuing commitment to advancing women\’s careers. We highlight the three fundamentals of this process as Learning New Skills, Gaining New Experiences and Expanding Your Network. '
+		explanation : 'Knowing and Growing Your Career Capital was adopted as the theme for International Women’s Day 2014. The three highlights of this theme were Learning New Skills, Gaining New Experiences and Expanding Your Network.'
 	}, {
 		question : " In the Accenture Survey “Career Capital 2014,” virtually equal numbers of men and women agreed that building their career capital is the key to success.",
 		option_1 : "True",
@@ -70,9 +70,9 @@ var question_data = {
 		option_3 : "70%",
 		option_4 : "88%",
 		correct_answer : "3",
-		explanation : '70% believe there would be an increase in women CEOs, 15% of that group believes that the increase will be significant. 71% of all respondents thought the number of women on boards will increase by 2020. 44% said their companies are preparing women for senior management roles. Accenture has many programs in place that do just that.'
+		explanation : 'Of all the respondents, 70% believe there would be an increase in women CEO. 71% of all respondents thought the number of women on boards will increase by 2020. 44% said their companies are preparing women for senior management roles. Accenture has many programs in place that do just that.'
 	}, {
-		question : "What rank did Accenture achieve on LinkedIn India’s “Most in Demand Employers in 2013”?",
+		question : "What rank did Accenture achieve on LinkedIn India’s “Most InDemand Employers in 2013”?",
 		option_1 : "First",
 		option_2 : "Fifth",
 		option_3 : "Seventh",
@@ -86,9 +86,9 @@ var question_data = {
 		option_3 : " $85 million",
 		option_4 : " $850 million",
 		correct_answer : "4",
-		explanation : 'Accenture makes constant investments in our employees so they can develop skills and capabilities based on their interests and talents.'
+		explanation : 'Accenture invested $850 million in training its employees in 2013. Accenture makes constant investments in its employees so that they can develop skills and capabilities based on their interests and talents.'
 	}
-	/*, {
+	, {
 	 question : "Which of these are Accenture’s Core Values? ",
 	 option_1 : "Best people",
 	 option_2 : "Respect for the individual",
@@ -133,7 +133,7 @@ var question_data = {
 	 option_4 : "No. 15",
 	 correct_answer : "2",
 	 explanation:'In the same year, Accenture in India also topped the list of \'India\'s Most inDemand Employers\’, compiled by LinkedIn and was ranked No.2 in Business Today\'s \'Best Companies to Work for in India\' survey.'
-	 }*/
+	 }
 	]
 
 };
@@ -196,12 +196,16 @@ var resource_data = {
 	},
 	htmlentity : ['loading_screen_ui', 'landing_screen_ui', 'intro_screen_ui', 'game_screen_ui', 'end_screen_ui', 'top_question_game_screen_ui'],
 	appMode : 2, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
+	total_questions :10,
 	appTimer : 180, // its seconds
 	bench_mark : [4, 8, 10], // scoring mechanism range
 	no_of_stars : ["Bronze", "Silver", "Gold"], // scoring mechanism award
 	per_question : 1, // perquestion hike,
 	url_diversity : 'http://careers.accenture.com/in-en/team-culture/diversity/Pages/index.aspx',
 	url_jobs : 'http://careers.accenture.com/in-en/Pages/index.aspx',
-	social_site_content : 'I scored <%badge_won%> stars in <%time_taken%> seconds. Are you a ready to play  this fun quiz by Accenture too?. You can play it here <%url_for_game%>'
+	social_site_content : 'I scored a <%badge_won%> Star in <%time_taken%> seconds in this fun quiz by Accenture. Click on the link to play and share your score! <%url_for_game%>',
+	social_site_content_facebook : 'I scored a <%badge_won%> Star in <%time_taken%> seconds in this fun quiz by Accenture. Click on the link to play and share your score! <%url_for_game%>',
+	social_site_content_twitter : 'I scored a <%badge_won%> Star in <%time_taken%> seconds in this fun quiz about #WomenAtAccenture. Click on the link to play and share your score! <%url_for_game%>',
+	social_site_content_linkedin : 'I scored a <%badge_won%> Star in <%time_taken%> seconds in this fun quiz by Accenture. Click on the link to play and share your score! <%url_for_game%>'
 
 }
