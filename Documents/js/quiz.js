@@ -93,20 +93,24 @@ ApplicationWrapper.prototype = {
 		var realQuestionLength = resource_data.total_questions;
 		var nIndex =0;
 		var arrT=[]
-		for(var i=0;i<realQuestionLength;i++)
+		for(var i=0;i<len;i++)
 		{
 			arrT.push(i);
 		}
 		//
+		//console.log("total numbers "+arrT);
 		this.question_data['questionSet' + this.appMetaData.questionSet] =[]
 		for(var i=0;i<realQuestionLength;i++)
 		{
 			// 
-			nIndex = this.getRandomInt(0,arrT.length);
+			nIndex = this.getRandomInt(0,arrT.length-1);
+			//console.log("Random number: "+nIndex);
 			totalRandomQuestionList[i] = arrT[nIndex];
 			
-			this.question_data['questionSet' + this.appMetaData.questionSet][i]=question_data['questionSet' + this.appMetaData.questionSet][nIndex];
+			this.question_data['questionSet' + this.appMetaData.questionSet][i]=question_data['questionSet' + this.appMetaData.questionSet][arrT[nIndex]];
+			//console.log("Bi :"+i+" :"+arrT)
 			arrT.splice(nIndex,1);
+			//console.log("Ai :"+i+" :"+arrT)
 		} 
 		
 		trace("totalRandomQuestionList :"+totalRandomQuestionList)

@@ -83,7 +83,7 @@ LoadingScreen.prototype = {
 	},
 	onComplete : function() {
 		trace("ASSET Loading COMPLETE!")
-		this.mApplication.nextScene();
+		//this.mApplication.nextScene();
 	},
 	onWrapperPush : function(cmd, data) {
 
