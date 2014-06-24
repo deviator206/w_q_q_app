@@ -40,6 +40,7 @@ LoadingScreen.prototype = {
 		//document.getElementById("loadingMessage").innerHTML = "<h1>Loading  Assets : Status :" + a + " % </h1>" ;
 
 		trace(a);
+		
 		if (a <= 20) {
 			var newTotal = 20;
 			var newPercent = a / 20 * 100;
@@ -77,7 +78,8 @@ LoadingScreen.prototype = {
 			
 			$("#loader-5 .loader-inner-container").css("width", newPercent + "%");
 		}
-		document.getElementById("loader_anim").style.width =  "100%"
+		
+		/*document.getElementById("loader_anim").style.width =  "100%"*/
 
 		trace(a)
 	},
