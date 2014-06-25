@@ -123,8 +123,12 @@ EndScreen.prototype = {
 				//working
 				//url = "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=WQQ&description=" +publishingContent+ "&link=http://primary.careers-edit.accenture.com/&redirect_uri=http://facebook.com"
 				//working as expected... with self app
+				
+				//http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/landing/bg-girl.png
+				//http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg
 				//working IMAGE SAMPLE :http://ginva.com/wp-content/uploads/2012/11/free-image-public-domain-31.jpg
-				url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" +publishingContent+ "&link="+publishingURL+"&redirect_uri=http://facebook.com&picture=https://primary.careers-edit.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/award.png"
+//				url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" +publishingContent+ "&link="+publishingURL+"&redirect_uri=http://facebook.com&picture=http://demo.appstute.in/wqq/PublishingImages/quiz/end/fb_post.jpg"
+				url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" +publishingContent+ "&link="+publishingURL+"&redirect_uri=http://facebook.com&picture=http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg"
 				window.open(url,"_blank");
 				break;
 			case 'twitter':
@@ -135,7 +139,7 @@ EndScreen.prototype = {
 			case 'linkedin':
 				var publishingContent = this.manipulateSSNContent('linkedin');
 				//https://developer.linkedin.com/documents/share-linkedin
-				url = 'http://www.linkedin.com/shareArticle?mini=true&url='+publishingURL+'&title=WQQ&summary= ' +publishingContent+ '&source='+publishingURL;
+				url = 'http://www.linkedin.com/shareArticle?mini=true&url='+publishingURL+'&title=Are you ready to raise the game?&summary= ' +publishingContent+ '&source='+publishingURL;
 				window.open(url,"_blank");
 
 				break;
