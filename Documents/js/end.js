@@ -139,7 +139,7 @@ EndScreen.prototype = {
 			case 'linkedin':
 				var publishingContent = this.manipulateSSNContent('linkedin');
 				//https://developer.linkedin.com/documents/share-linkedin
-	url = 'http://www.linkedin.com/shareArticle?mini=true&title=Are you ready to raise the game?&summary='+publishingContent+'&source='+publishingURL+'&url=http%3A%2F%2Fwww.isba.org%2Fsites%2Fdefault%2Ffiles%2Fimages%2Flandingpages%2Fpublic.jpg';
+	url = 'http://www.linkedin.com/shareArticle?mini=true&title=Are you ready to raise the game?&summary='+publishingContent+'&source='+publishingURL+'&url=http%3A%2F%2Fcareers.accenture.com%2Fin-en%2Fteam-culture%2Fdiversity%2FPublishingImages%2Fquiz%2Fend%2Ffb_post.jpg';
 				window.open(url,"_blank");
 
 				break;
