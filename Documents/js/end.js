@@ -158,9 +158,10 @@ EndScreen.prototype = {
                         },
                         "comment" : publishingContent,
                     })).result(function(r) {
-                        alert("POST OK");
+                        alert("SUCESSFULLY SHARED THE LINK & SCORE");
                     }).error(function(r) {
-                        alert("POST FAIL");
+                        var msg = (r.message !== undefined)?r.message:"";
+                        alert("POST FAILED : "+msg);
                     });
 
                 });
