@@ -262,7 +262,7 @@ var resource_data = {
 	appMode : 2, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
 	total_questions :10,
 	appTimer : 180, // its seconds
-	bench_mark : [4, 8, 10], // scoring mechanism range
+	bench_mark : [4, 7, 10], // scoring mechanism range
 	no_of_stars : ["Bronze", "Silver", "Gold"], // scoring mechanism award
 	per_question : 1, // perquestion hike,
 	url_diversity : 'http://careers.accenture.com/in-en/team-culture/diversity/Pages/index.aspx',
