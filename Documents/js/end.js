@@ -126,7 +126,10 @@ EndScreen.prototype = {
                 //http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg
                 //working IMAGE SAMPLE :http://ginva.com/wp-content/uploads/2012/11/free-image-public-domain-31.jpg
                 //				url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" +publishingContent+ "&link="+publishingURL+"&redirect_uri=http://facebook.com&picture=http://demo.appstute.in/wqq/PublishingImages/quiz/end/fb_post.jpg"
-                url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" + publishingContent + "&link=" + publishingURL + "&redirect_uri=http://facebook.com&picture=http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg"
+                // 1st July working
+                //url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" + publishingContent + "&link=" + publishingURL + "&redirect_uri=http://facebook.com&picture=http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg"
+                
+                url = "https://www.facebook.com/dialog/feed?app_id=259115040943919&caption=WQQ&description=" + publishingContent + "&link=" + publishingURL + "&redirect_uri=http://facebook.com&picture=http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg"
                 window.open(url, "_blank");
                 break;
             case 'twitter':

@@ -92,7 +92,7 @@ body{
 #landingPage .landing-intro-text{
 	overflow:auto;
 	overflow-x:hidden;
-	max-height:165px;
+	max-height:145px;
 }
 #landingPage .landing-para
 {
@@ -291,6 +291,10 @@ body{
 		}
 	.std-btn{
 		width:28%;
+		}
+		
+		#landingPage .landing-intro-text{
+			max-height:115px;
 		}
 	
 }
