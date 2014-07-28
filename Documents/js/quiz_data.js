@@ -100,11 +100,11 @@ var question_data = {
 
 	 , {
 	 question : "How many people are part of Accenture’s worldwide employee network?",
-	 option_1 : "76,000",
-	 option_2 : "143,000",
-	 option_3 : "281,000",
-	 option_4 : "329,000",
-	 correct_answer : "3",
+	 option_1 : "<76,000",
+	 option_2 : "<289,000",
+	 option_3 : ">400,000",
+	 option_4 : ">293,000",
+	 correct_answer : "4",
 	 explanation:'With offices and operations in more than 200 cities in 56 countries, Accenture is positioned to provide global management consulting, technology and outsourcing services.'
 	 }
 	 , {
@@ -156,7 +156,7 @@ var question_data = {
 	 option_3 : "Indefinite Work Hours",
 	 option_4 : "Rigid Work Hours",
 	 correct_answer : "1",
-	 explanation:'We know how important it is for our people to strike a balance between their work and personal lives. Various technological innovations combined with Accenture\'s commitment to flexibility in the workplace, allow us to offer our people a flexible approach by giving them options as to how and where they do their work.'
+	 explanation:'We know how important it is for our people to strike a work-life balance. Various technological innovations combined with flexibility in the workplace allow us to offer a unique approach to work by giving our people options on how and where they do their work.'
 },{
 	 question : " Career counselors are available to each employee at Accenture.",
 	 option_1 : "True",
@@ -259,7 +259,7 @@ var resource_data = {
 		'end' : 'endPage'
 	},
 	htmlentity : ['loading_screen_ui', 'landing_screen_ui', 'intro_screen_ui', 'game_screen_ui', 'end_screen_ui', 'top_question_game_screen_ui'],
-	appMode : 2, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
+	appMode : 0, // 0 - xtreme debugging  mode OR 1 - dev mode OR 2 -live with no console
 	total_questions :10,
 	appTimer : 180, // its seconds
 	bench_mark : [4, 7, 10], // scoring mechanism range

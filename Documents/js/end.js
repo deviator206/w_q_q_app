@@ -31,7 +31,8 @@ EndScreen.prototype = {
 
         //addEventListener
         //document.getElementById('intro_btn_continue').addEventListener("click", this.clickHandler.bind(this));
-
+        //
+        this.mApplication.addEventHandler('play-again-app', 'click', this.clickHandler.bind(this));
         /*this.mApplication.addEventHandler('end_screen_back', 'click', this.clickHandler.bind(this));*/
 
         this.mApplication.addEventHandler('facebook', 'click', this.clickHandler.bind(this));
@@ -101,6 +102,9 @@ EndScreen.prototype = {
 
         var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
         switch(target.id) {
+            case 'play-again-app':
+                this.mApplication.moveTo('home');
+            break;
             case 'facebook':
 
                 publishingContent = this.manipulateSSNContent('facebook');
@@ -146,6 +150,9 @@ EndScreen.prototype = {
                  */
 
                  imgURL = "http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg";
+                 
+                 if(IN.User !== undefined && IN.User.hasOwnProperty("authorize"))
+                 {
                 IN.User.authorize(function() {
                     //alert("authenticated");
 
@@ -153,7 +160,7 @@ EndScreen.prototype = {
                         "content" : {
                             "submitted-url" : window.location.href,
                             "title" : "WQQ",
-                            "description" : "Women's Quotient Quiz",
+                            "description" : "Accenture's women quiz",
                             "submitted-image-url" : imgURL
                         },
                         "visibility" : {
@@ -161,13 +168,18 @@ EndScreen.prototype = {
                         },
                         "comment" : publishingContent,
                     })).result(function(r) {
-                        alert("SUCESSFULLY SHARED THE LINK & SCORE");
+                        alert("Congratulations! You have successfully shared your score with your network.");
                     }).error(function(r) {
                         var msg = (r.message !== undefined)?r.message:"";
                         alert("POST FAILED : "+msg);
                     });
 
                 });
+                }
+                else
+                {
+                     alert("ERROR WITH LINKED-IN API");
+                }
 
                 break;
             default :
