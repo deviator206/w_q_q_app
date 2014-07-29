@@ -97,7 +97,7 @@ EndScreen.prototype = {
     },
     clickHandler : function(event) {
         var url = "",imgURL,publishingContent;
-        var publishingURL = location.href;
+        var publishingURL =  resource_data.app_shorten_url;//location.href;
         //var publishingContent = this.manipulateSSNContent();
 
         var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
@@ -153,7 +153,7 @@ EndScreen.prototype = {
                  
                  if(IN.User !== undefined && IN.User.hasOwnProperty("authorize"))
                  {
-                IN.User.authorize(function() {
+                    IN.User.authorize(function() {
                     //alert("authenticated");
 
                     IN.API.Raw("/people/~/shares").method("POST").body(JSON.stringify({
@@ -178,7 +178,9 @@ EndScreen.prototype = {
                 }
                 else
                 {
-                     alert("ERROR WITH LINKED-IN API");
+                    alert("ERROR WITH LINKEDIN API");
+                    url = 'http://www.linkedin.com/shareArticle?mini=true&title=WQQ?&summary='+publishingContent+'&source='+publishingURL+'&url=http%3A%2F%2Fcareers.accenture.com%2Fin-en%2Fteam-culture%2Fdiversity%2FPublishingImages%2Fquiz%2Fend%2Ffb_post.jpg';
+                    window.open(url,"_blank");
                 }
 
                 break;
