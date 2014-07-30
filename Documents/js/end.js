@@ -95,18 +95,29 @@ EndScreen.prototype = {
         return str
 
     },
+    
+    trackAnalysis :function(id)
+    {
+        if(top.FlashLinkAnalysis !== undefined)
+                {
+                    top.FlashLinkAnalysis(top.location.href, id , 'html5');
+                }
+    },
     clickHandler : function(event) {
         var url = "",imgURL,publishingContent;
         var publishingURL =  resource_data.app_shorten_url;//location.href;
         //var publishingContent = this.manipulateSSNContent();
 
         var target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+        if(target.id !== 'play-again-app')
+        this.trackAnalysis(target.id);
+        
         switch(target.id) {
             case 'play-again-app':
                 this.mApplication.moveTo('home');
             break;
             case 'facebook':
-
+                
                 publishingContent = this.manipulateSSNContent('facebook');
                 /*
                 https://www.facebook.com/sharer/sharer.php

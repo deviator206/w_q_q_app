@@ -36,6 +36,10 @@ LandingScreen.prototype = {
 		switch(target.id) {
 			case 'landing_btn_start':
 				//this.mApplication.moveTo('start');
+				if(top.FlashLinkAnalysis !== undefined)
+				{
+				    top.FlashLinkAnalysis(top.location.href, 'Start' , 'html5');
+				}
 				//##CR##We will start the game with the introduction followed by the start button. Please look at the attached document for the same.
 				this.mApplication.moveTo('intro');
 				break;
