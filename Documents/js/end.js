@@ -147,7 +147,7 @@ EndScreen.prototype = {
                 // 1st July working
                 //url = "https://www.facebook.com/dialog/feed?app_id=364527546948066&caption=WQQ&description=" + publishingContent + "&link=" + publishingURL + "&redirect_uri=http://facebook.com&picture=http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg"
                 
-                url = "https://www.facebook.com/dialog/feed?app_id=259115040943919&caption="+caption+"&description=" + publishingContent + "&link=" + publishingURL + "&redirect_uri=http://facebook.com&picture=http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg"
+                url = "https://www.facebook.com/dialog/feed?app_id=259115040943919&name="+caption+"&description=" + publishingContent + "&link=" + publishingURL + "&redirect_uri=http://facebook.com&picture=http://careers.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/end/fb_post.jpg"
                 window.open(url, "_blank");
                 break;
             case 'twitter':
@@ -192,8 +192,8 @@ EndScreen.prototype = {
                 }
                 else
                 {
-                    alert("ERROR WITH LINKEDIN API");
-                    url = 'http://www.linkedin.com/shareArticle?mini=true&title='+caption+'?&summary='+publishingContent+'&source='+publishingURL+'&url=http%3A%2F%2Fcareers.accenture.com%2Fin-en%2Fteam-culture%2Fdiversity%2FPublishingImages%2Fquiz%2Fend%2Ffb_post.jpg';
+                    //alert("ERROR WITH LINKEDIN API");
+                    url = 'http://www.linkedin.com/shareArticle?mini=true&title='+caption+'?&summary='+publishingContent+'&url='+publishingURL;
                     window.open(url,"_blank");
                 }
 
