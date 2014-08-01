@@ -366,17 +366,7 @@
             </div>
             </div>
         </div>
-        <div id="landingPage" style="display: block; background-image: url(https://primary.careers-edit.accenture.com/in-en/team-culture/diversity/PublishingImages/quiz/landing/bg-girl.png);" class="home-page-bg">
-            <div class="home-question-text">Why do smart women want to work at Accenture?</div>
-            <div class="button-text-container">
-            <div class="landing-intro-text">
-            <div class="landing-para">At Accenture, we know that the success of our women around the globe is the key to our success as a company. That's why we are committed to supporting their unique professional goals and aspirations and why we foster an innovative, collaborative, high-energy work environment.</div>
-            <div class="landing-para">Do you know what we do for our women and for those in society? Take our quiz to learn how Accenture delivers on the benefits and rewards that women deserve. You will get 3 minutes to answer all questions; the faster you correctly answer these 10 multiple choice questions, the higher your chance of earning a 'gold star' and bragging rights! </div>
-            </div>
-            <div id="landing_btn_start" class="std-btn first-left-btn landing-start-btn">Start Game</div>
-            </div>
-
-            <div id="img_landing_lady1" class="home-girl-img"></div>
+        <div id="landingPage" style="display: none; " class="home-page-bg">
 
         </div>
         <div id="introductionPage" style="display: none;" class="page-bg"></div>

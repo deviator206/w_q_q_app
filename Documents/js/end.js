@@ -173,7 +173,7 @@ EndScreen.prototype = {
                     IN.API.Raw("/people/~/shares").method("POST").body(JSON.stringify({
                         "content" : {
                             "submitted-url" : window.location.href,
-                            "title" : caption,
+                            "title" : description,
                             "description" : description,
                             "submitted-image-url" : imgURL
                         },
@@ -193,7 +193,7 @@ EndScreen.prototype = {
                 else
                 {
                     //alert("ERROR WITH LINKEDIN API");
-                    url = 'http://www.linkedin.com/shareArticle?mini=true&title='+caption+'?&summary='+publishingContent+'&url='+publishingURL;
+                    url = 'http://www.linkedin.com/shareArticle?mini=true&title='+description+'&summary='+publishingContent+'&url='+publishingURL;
                     window.open(url,"_blank");
                 }
 
