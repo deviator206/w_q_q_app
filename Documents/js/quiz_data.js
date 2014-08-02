@@ -272,7 +272,7 @@ var resource_data = {
 	social_site_content_twitter : 'I scored a <%badge_won%> Star in <%time_taken%> seconds in this fun quiz about #WomenAtAccenture. To play & share your score, click <%url_for_game%>',
 	social_site_content_linkedin : 'I scored a <%badge_won%> Star in <%time_taken%> seconds in this fun quiz by Accenture. Click on the link to play and share your score! <%url_for_game%>',
 	app_shorten_url:'http://bit.ly/1xss6lu',
-	caption_title:"Accenture’s women quiz",
+	caption_title:"Accenture&#39;s women quiz",
 	description_linkedin:"Are you ready to raise the game?" 
 	
 
